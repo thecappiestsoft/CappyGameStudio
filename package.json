@@ -1,0 +1,21 @@
+{
+  "name": "cappygamestudio",
+  "version": "1.7.0",
+  "private": true,
+  "description": "CappyGameStudio – edukacyjne studio gier 2D bez kodu (wersja dla szkół Infotech). Jedna strona HTML, bez serwera.",
+  "author": "CappySoft.pl",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "node build/build.js",
+    "watch": "node build/build.js --watch",
+    "serve": "node tools/serve.js 8080",
+    "test": "node tests/skladnia.js",
+    "test:e2e": "node tests/sprawdz-szablony.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,107 @@
+/* ===== kid-friendly layer: step path menu, module colors, Cappy helper ===== */
+:root{--navw:232px;
+  --m-scena:#2f6fd0;--m-obiekty:#c9530e;--m-zachowania:#1a7f45;--m-mechaniki:#7b4fd6;--m-przebieg:#c8336f;--m-zasoby:#0b7b8a;--m-test:#b86200;--m-eksport:#34407a;--m-projekt:#655a7c;
+  --mod:var(--primary);--paper-dot:rgba(45,37,71,.07);--brand-accent:#d96b00}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper-dot:rgba(255,244,224,.05);--brand-accent:var(--accent);--m-scena:#6fa8ff;--m-obiekty:#ff9a57;--m-zachowania:#55d68a;--m-mechaniki:#b193ff;--m-przebieg:#ff7fb0;--m-zasoby:#46d0df;--m-test:#ffc266;--m-eksport:#8e9bff;--m-projekt:#cbbfda}}
+:root[data-theme="dark"]{--paper-dot:rgba(255,244,224,.05);--brand-accent:var(--accent);--m-scena:#6fa8ff;--m-obiekty:#ff9a57;--m-zachowania:#55d68a;--m-mechaniki:#b193ff;--m-przebieg:#ff7fb0;--m-zasoby:#46d0df;--m-test:#ffc266;--m-eksport:#8e9bff;--m-projekt:#cbbfda}
+body{font-size:16px}
+main#view,.pane.scroll{background-color:var(--bg);background-image:radial-gradient(var(--paper-dot) 1.6px,transparent 1.7px);background-size:22px 22px}
+.top{border-bottom-width:4px;background:var(--surface)}
+.brand b{font-size:1.45rem;letter-spacing:-.01em}
+.brand b i{font-style:normal;color:var(--brand-accent,var(--accent))}
+.brand img{width:48px;height:48px}
+.top .pname{font-size:1.1rem;background:var(--accent-soft);border:2px solid var(--edge);border-radius:999px;padding:4px 14px;box-shadow:0 2px 0 var(--edge)}
+.top .acts .btn{min-height:42px}
+.btn.big{min-height:48px;padding:8px 20px;font-size:1.12rem}
+/* step path */
+.mnav{padding:12px 10px 16px;gap:2px;background:var(--surface);border-right:3px solid var(--edge)}
+.mnav .navt{font:800 .72rem var(--f-display);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding:2px 8px 6px}
+.mnav a.step{position:relative;flex-direction:row;align-items:center;gap:10px;padding:6px 8px;border-radius:14px;text-align:left;font-size:.92rem;border:2px solid transparent}
+.mnav a.step .ti{position:relative;flex:none;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--c);color:var(--on-mod);border:2px solid var(--edge);box-shadow:0 3px 0 var(--edge)}
+.mnav a.step .ti svg{width:23px;height:23px}
+.mnav a.step .num{position:absolute;top:-7px;left:-7px;width:20px;height:20px;border-radius:50%;background:var(--surface);color:var(--text);border:2px solid var(--edge);font:800 .7rem/16px var(--f-display);text-align:center}
+.mnav a.step .tx{display:flex;flex-direction:column;min-width:0;line-height:1.15}
+.mnav a.step .tx b{font:800 1rem var(--f-display)}
+.mnav a.step .tx small{font-size:.72rem;color:var(--muted);font-weight:500}
+.mnav a.step:not(:last-of-type)::after{content:"";position:absolute;left:28px;top:52px;height:12px;border-left:3px dotted var(--line)}
+.mnav a.step:hover{background:var(--surface2);border-color:var(--line)}
+.mnav a.step[aria-current="page"]{background:var(--surface2);border-color:var(--edge);box-shadow:0 3px 0 var(--edge)}
+.mnav a.step[aria-current="page"] .ti{transform:scale(1.08) rotate(-4deg)}
+.mnav a.step.play .ti{width:46px;height:46px;border-radius:50%}
+.mnav a.small{flex-direction:row;gap:10px;align-items:center;padding:7px 10px;font-size:.88rem;text-align:left;border-radius:12px}
+.mnav a.small svg{width:20px;height:20px;color:var(--muted)}
+.mnav hr{margin:10px 6px}
+/* module bar with Cappy */
+.col{display:grid;grid-template-rows:auto minmax(0,1fr);min-height:0;min-width:0}
+#modbar{display:flex;align-items:center;gap:14px;padding:8px max(16px,env(safe-area-inset-right,0px)) 8px 16px;background:var(--surface);border-bottom:3px solid var(--mod);position:relative}
+#modbar .mt{width:46px;height:46px;flex:none;border-radius:14px;background:var(--mod);color:var(--on-mod);border:2px solid var(--edge);box-shadow:0 3px 0 var(--edge);display:grid;place-items:center}
+#modbar .mt svg{width:26px;height:26px}
+#modbar .mh{display:flex;flex-direction:column;min-width:0}
+#modbar .mh small{font:800 .7rem var(--f-display);letter-spacing:.09em;text-transform:uppercase;color:var(--mod)}
+#modbar .mh b{font:800 1.35rem/1.05 var(--f-display)}
+.cappy{display:flex;align-items:center;gap:8px;min-width:0;flex:1}
+.cappy img{width:40px;height:40px;flex:none}
+.bubble{position:relative;background:var(--accent-soft);border:2px solid var(--edge);border-radius:14px;padding:6px 12px;font-size:.9rem;font-weight:500;line-height:1.3;max-width:62ch}
+.bubble::before{content:"";position:absolute;left:-9px;top:50%;width:12px;height:12px;background:inherit;border-left:2px solid var(--edge);border-bottom:2px solid var(--edge);transform:translateY(-50%) rotate(45deg)}
+#modbar .stepnav{display:flex;gap:6px;flex:none}
+/* module accent everywhere */
+.eyebrow{color:var(--mod)}
+.sec{border-radius:18px;border-width:3px;box-shadow:0 4px 0 var(--edge)}
+.sec h3 svg{width:30px;height:30px;padding:5px;border-radius:9px;background:var(--mod);color:var(--on-mod);box-sizing:border-box}
+.ptabs button[aria-selected="true"]{background:var(--mod)}
+.seg button[aria-pressed="true"]{background:var(--mod);color:var(--on-mod)}
+.seg button{min-height:42px}
+.seg.labels button span{font-size:.85rem}
+.orow[aria-pressed="true"],.orow[aria-current="true"]{border-color:var(--mod);background:var(--surface2);box-shadow:inset 4px 0 0 var(--mod)}
+.orow img{width:36px;height:36px}
+.ogroup{color:var(--mod)}
+.hero-band{border-width:4px;border-radius:26px;background:linear-gradient(135deg,var(--sky),var(--accent-soft))}
+.tplgrid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.tpl{display:flex;flex-direction:column;border:3px solid var(--edge);border-radius:20px;background:var(--surface);box-shadow:0 5px 0 var(--edge);overflow:hidden;cursor:pointer;text-align:left;padding:0;color:var(--text);transition:transform .1s}
+.tpl:hover{transform:translateY(-3px) rotate(-.5deg)}
+.tpl:active{transform:translateY(3px);box-shadow:0 2px 0 var(--edge)}
+.tpl img{width:100%;aspect-ratio:5/3;object-fit:cover;border-bottom:3px solid var(--edge);display:block;background:var(--sunk)}
+.tpl .tb{padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.tpl .tb b{font:800 1.2rem var(--f-display)}
+.tpl .tb span{font-size:.85rem;color:var(--muted)}
+.tpl .tag{align-self:flex-start;font:800 .66rem var(--f-display);letter-spacing:.07em;text-transform:uppercase;padding:2px 9px;border-radius:999px;background:var(--c);color:var(--on-mod)}
+.pcard{border-width:3px;border-radius:18px;box-shadow:0 4px 0 var(--edge)}
+.diag{border-top:3px solid var(--edge)}
+.diag-bar button.tg{font-size:.98rem}
+.comp{border-radius:16px}
+.empty{border-radius:18px;border-width:3px}
+@media (max-width:1180px){:root{--navw:200px}.mnav a.step .tx small{display:none}}
+@media (max-width:960px){
+  .mnav{border-right:0;border-bottom:3px solid var(--edge);padding:8px;gap:6px}
+  .mnav .navt,.mnav a.small span,.mnav hr{display:none}
+  .mnav a.step{flex-direction:column;min-width:74px;gap:4px;padding:4px;text-align:center}
+  .mnav a.step .tx b{font-size:.72rem}
+  .mnav a.step::after{display:none}
+  .mnav a.small{padding:4px 8px}
+  #modbar{flex-wrap:wrap}
+  #modbar .cappy{order:3;flex-basis:100%}
+}
+
+.tpl .tb .tag{color:var(--on-mod)}
+.bubble{min-width:0;overflow-wrap:anywhere}
+.diag-bar{flex-wrap:wrap}
+@media (max-width:760px){.seg.labels button span{display:none}.seg.labels button{padding:6px 10px}}
+@media (max-width:560px){
+  .top{flex-wrap:wrap;gap:6px}
+  .top .acts{width:100%;justify-content:space-between}
+  .top .acts .btn.sm span{display:none}
+  .top .acts .btn.big span{display:inline}
+  #modbar .stepnav{width:100%}
+  #modbar .stepnav .btn{flex:1;justify-content:center}
+  #modbar .stepnav .btn.sm:not(.pri) span{display:none}
+  .diag-bar .lv:nth-of-type(n+4){display:none}
+}
+
+.ptitle{flex-wrap:wrap}.pane>.wrap{min-width:0;max-width:100%!important}
+@media (max-width:560px){.btn{white-space:normal;text-align:center}.comp-h label.f{flex-wrap:wrap}}
+
+.testgrid{grid-template-columns:minmax(0,1fr) 320px!important;grid-template-rows:auto minmax(0,1fr)!important}
+.testgrid>.gamebox{grid-row:1/3;grid-column:1}
+.testgrid>.insp{grid-row:1!important;grid-column:2!important;max-height:42vh;overflow:auto}
+.testgrid>.logbox{grid-row:2;grid-column:2;min-height:120px}
+@media (max-width:960px){.testgrid{grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto!important}.testgrid>.gamebox,.testgrid>.insp,.testgrid>.logbox{grid-row:auto!important;grid-column:auto!important}}

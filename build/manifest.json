@@ -1,0 +1,265 @@
+{
+  "css": [
+    {
+      "file": "src/styles/00-wspolne.css",
+      "join": ""
+    },
+    {
+      "file": "src/styles/10-studio.css",
+      "join": ""
+    },
+    {
+      "file": "src/styles/20-warstwa-dla-dzieci.css",
+      "join": "\n"
+    },
+    {
+      "file": "src/styles/30-palety.css",
+      "join": "\n"
+    },
+    {
+      "file": "src/styles/40-styl-dashboard.css",
+      "join": "\n"
+    }
+  ],
+  "engine": [
+    {
+      "file": "src/engine/00-start.js",
+      "join": ""
+    },
+    {
+      "file": "src/engine/01-pomocnicze-rysowanie.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/02-typy-grafik.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/03-zachowania-junior.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/04-motywy-tla.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/05-grafiki.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/06-dzwieki.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/07-grafiki-dodatkowe.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/08-komponenty.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/09-definicje-i-warianty.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/10-runtime.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/11-css-gracza.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/12-pojedynek-karciany.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/13-clicker.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/14-css-kart-i-clickera.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/15-mount-game.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/engine/99-eksport-api.js",
+      "join": "\n"
+    }
+  ],
+  "app": [
+    {
+      "file": "src/app/core/00-start-i-narzedzia.js",
+      "join": ""
+    },
+    {
+      "file": "src/app/core/01-ikony.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/core/02-zapis-indexeddb.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/core/03-komunikaty-i-okna.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/core/04-pliki.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/core/05-biblioteka-obiektow-i-szablony.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/core/06-definicje.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/core/07-sprawdzacz-gry.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/core/08-router-i-menu.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/10-moje-gry.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/11-ustawienia-gry.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/12-edytor-planszy.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/00-pomocnicze.js",
+      "join": ""
+    },
+    {
+      "file": "src/app/templates/rpg.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/visual-novel.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/gra-karciana.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/clicker.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/flappy-cappy.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/souls-like.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/bullet-hell.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/bullet-heaven.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/metroidvania.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/01-pomocnicze-v17.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/dungeon-crawler.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/looter-shooter.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/tower-defense.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/sokoban.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/wyscigi.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/waz.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/templates/arkanoid.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/20-postacie-i-rzeczy.js",
+      "join": ""
+    },
+    {
+      "file": "src/app/screens/21-co-robia-zachowania.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/22-zasady.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/23-poziomy.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/24-obrazki-i-dzwieki.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/25-zagraj-test.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/26-udostepnij-eksport.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/27-pomoc-i-wyglad.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/30-karty-i-talie.js",
+      "join": ""
+    },
+    {
+      "file": "src/app/screens/31-eksport-na-platformy.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/screens/32-samouczki-z-cappy.js",
+      "join": "\n"
+    },
+    {
+      "file": "src/app/99-start-aplikacji.js",
+      "join": "\n"
+    }
+  ],
+  "version": "1.7.0"
+}
