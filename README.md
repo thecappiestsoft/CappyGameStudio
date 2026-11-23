@@ -179,6 +179,7 @@ Zmień numer w czterech miejscach: `APP_VERSION`/`APP_BUILD` w `screens/30-karty
 
 - `dist/index.html` to cała aplikacja. Można ją wgrać na dowolny serwer statyczny albo otworzyć z dysku.
 - `dist/cappygamestudio.fragment.html` to sama treść strony bez `<html>`/`<head>`, do osadzania w innym szablonie.
+- `index.html` w katalogu głównym to kopia `dist/index.html` dla GitHub Pages (Settings → Pages → Deploy from a branch → `main` / `/ (root)`). `npm run build` aktualizuje ją automatycznie – po zmianach zbuduj i zacommituj ten plik.
 - Zapisywanie plików korzysta z `window.claude.use("downloads")`, gdy aplikacja działa jako artefakt Claude. Poza nim używa zwykłego pobierania z przeglądarki.
 
 ## Zasady projektu
