@@ -4,6 +4,7 @@
  * Skleja pliki z src/ w kolejności z build/manifest.json i tworzy:
  *   dist/index.html                     – kompletna strona (otwórz w przeglądarce lub wgraj na serwer)
  *   dist/cappygamestudio.fragment.html  – sama treść strony (bez <html>/<head>), np. do osadzenia
+ *   index.html (w katalogu głównym)     – kopia dist/index.html dla GitHub Pages
  * Użycie:  node build/build.js           – jednorazowe budowanie
  *          node build/build.js --watch   – budowanie po każdej zmianie w src/
  */
@@ -35,6 +36,8 @@ function build() {
   fs.writeFileSync(path.join(DIST, 'cappygamestudio.fragment.html'), html);
   const page = '<!doctype html>\n<html lang="pl">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">\n<style>[hidden]{display:none!important}</style>\n</head>\n<body style="margin:0">\n' + html + '\n</body>\n</html>\n';
   fs.writeFileSync(path.join(DIST, 'index.html'), page);
+  // Kopia w katalogu głównym repozytorium – z niej korzysta GitHub Pages (dist/ jest w .gitignore).
+  fs.writeFileSync(path.join(ROOT, 'index.html'), page);
   const files = manifest.css.length + manifest.engine.length + manifest.app.length + 1;
   console.log('Zbudowano CappyGameStudio ' + manifest.version + ' z ' + files + ' plików → dist/index.html (' + Math.round(page.length / 1024) + ' KB) w ' + (Date.now() - t0) + ' ms');
 }
